@@ -11,6 +11,9 @@ public class MainAnagrama {
 	        int size = str.length(); 
 	        Anagram a = new Anagram(); 
 	        a.anagm(str, 0, size - 1); 
+	        
+//	        System.out.println("tamanho da lista: "+ a.getListaDeAnagramas());
+	        
 	    } 
 
 

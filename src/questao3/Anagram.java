@@ -1,10 +1,17 @@
 package questao3;
 
-public class Anagram {
+import java.util.ArrayList;
 
+public class Anagram {
+	
+	private ArrayList<String> listaDeAnagramas = new ArrayList<String>();
+	
 	void anagm(String str, int start, int end) {
 		if (start == end)
+		{
 			System.out.println(str);
+			setListaDeAnagramas(str);
+		}
 		else {
 			
 				for (int i = start; i <= end; i++) {
@@ -23,4 +30,19 @@ public class Anagram {
 		charArray[j] = temp;
 		return String.valueOf(charArray);
 	}
+
+	public ArrayList<String> getListaDeAnagramas() {
+		return listaDeAnagramas;
+	}
+
+	public void setListaDeAnagramas(String listaDeAnagramas) {
+		this.listaDeAnagramas.add(listaDeAnagramas);
+	}
+	
+	public void compararAnagrama() {
+		
+	}
+	
+	
+	
 }
