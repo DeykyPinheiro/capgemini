@@ -1,5 +1,6 @@
 package questao1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -13,9 +14,14 @@ public class MainTree {
 		System.out.print("Digite o numero de degraus: ");
 		Scanner input = new Scanner(System.in);
 		Tree arvore = new Tree();
-		int number = input.nextInt();
+			
+		try {
+			int number = input.nextInt();
+			arvore.ImprimirArvore(number);
+			input.close();
+		} catch (InputMismatchException e) {
+            System.out.println("Entrada inválida, digite um número inteiro!");
+        }
 
-		arvore.ImprimirArvore(number);
-		input.close();
 	}
 }
