@@ -20,7 +20,7 @@ public class StringUtils {
 		return listaDesubstring;
 	}
 
-	public void compararSubstring(List<List<String>> listaDesubstring) {
+	public int compararSubstring(List<List<String>> listaDesubstring) {
 
 		int quantosSaoAnagrama = 0;
 		List<String> listaAnagramasRepetido = new ArrayList<>();
@@ -37,64 +37,26 @@ public class StringUtils {
 			}
 		}
 //		System.out.println(listaAnagramasRepetidoEmOrdem);
-		contarAnagramasRepetidos(listaAnagramasRepetidoEmOrdem);
+		return contarAnagramasRepetidos(listaAnagramasRepetidoEmOrdem);
 	}
 
-	public void contarAnagramasRepetidos(List<String> listaAnagramasRepetido) {
+	public int contarAnagramasRepetidos(List<String> listaAnagramasRepetido) {
 
 		int contador = 0;
-		
-		System.out.println("contador: " + contador);
+
 		int i = 0;
-		while(i < listaAnagramasRepetido.size()) {
+		while (i < listaAnagramasRepetido.size()) {
 			int j = i + 1;
-			while(j < listaAnagramasRepetido.size()) {
+			while (j < listaAnagramasRepetido.size()) {
 				if (listaAnagramasRepetido.get(i).equals(listaAnagramasRepetido.get(j))) {
-				System.out.println("1: " + listaAnagramasRepetido.get(i) + " 2: " + listaAnagramasRepetido.get(j));
-					System.out.println("valor de i:" + i + " valor de j: " + j);
+//					System.out.println("anagrama: " + listaAnagramasRepetido.get(i));
 					contador++;
-					break;
 				}
 				j++;
 			}
 			i++;
 		}
-		System.out.println("contador: " + contador);
+		
+		return contador;
 	}
 }
-////		System.out.println("to aqui");
-//		for (int i = 0; i < listaAnagramasRepetido.size(); i++) {
-//			for (int j = i; j < listaAnagramasRepetido.size(); j++) {
-//				if (listaAnagramasRepetido.get(i) == (listaAnagramasRepetido.get(j))) {
-//					
-//					contador++;
-//					break;
-//				}
-//			}
-//		}
-//		System.out.println(contador);
-
-
-//	public boolean compararAnagrama(String a, String b) {
-//
-//		int contador = 0;
-//		int lenString = a.length();
-//
-//		if (a.length() != b.length()) {
-//			return false;
-//		} else {
-//			for (int i = 0; i < lenString; i++) {
-//				for (int j = 0; j < lenString; j++) {
-//
-//					if (a.toCharArray()[i] == b.toCharArray()[j]) {
-//						contador++;
-//					}
-//				}
-//			}
-//		}
-//		if (contador == lenString) {
-//			return true;
-//		}
-//		return false;
-//	}
-//}
