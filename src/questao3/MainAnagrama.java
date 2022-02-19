@@ -1,4 +1,5 @@
 package questao3;
+import java.util.Arrays;
 
 
 public class MainAnagrama {
@@ -13,6 +14,8 @@ public class MainAnagrama {
 	        Anagram a = new Anagram(); 
 	        StringUtils c = new StringUtils();
 	        a.anagm(str, 0, size - 1);
+	        
+//	        Arrays.sort(null);
 	        
 //	        System.out.println(a.getListaDeAnagramas());
 //	        
