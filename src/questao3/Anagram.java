@@ -3,22 +3,20 @@ package questao3;
 import java.util.ArrayList;
 
 public class Anagram {
-	
+
 	private ArrayList<String> listaDeAnagramas = new ArrayList<String>();
-	
+
 	void anagm(String str, int start, int end) {
-		if (start == end)
-		{
-			System.out.println(str);
+		if (start == end) {
+//			System.out.println(str);
 			setListaDeAnagramas(str);
-		}
-		else {
-			
-				for (int i = start; i <= end; i++) {
-					str = swap(str, start, i);
-					anagm(str, start + 1, end);
-					str = swap(str, start, i);
-				}
+		} else {
+
+			for (int i = start; i <= end; i++) {
+				str = swap(str, start, i);
+				anagm(str, start + 1, end);
+				str = swap(str, start, i);
+			}
 		}
 	}
 
@@ -38,11 +36,10 @@ public class Anagram {
 	public void setListaDeAnagramas(String listaDeAnagramas) {
 		this.listaDeAnagramas.add(listaDeAnagramas);
 	}
-	
+
 	public void compararAnagrama() {
 		
+		
 	}
-	
-	
-	
+
 }

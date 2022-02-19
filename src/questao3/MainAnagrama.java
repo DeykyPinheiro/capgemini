@@ -1,20 +1,25 @@
 package questao3;
 
+
 public class MainAnagrama {
 	 public static void main(String[] args) 
 	    {
-	        String str = "ifailuhkqq"; 
-	        System.out.println("String is:-"+str);
-	        System.out.println("Anagram of the given string is:-");
-	        
+	        String str = "ovo"; 
+//	        System.out.println("String is:-"+str);
+//	        System.out.println("Anagram of the given string is: ");
+//	        
 	        
 	        int size = str.length(); 
 	        Anagram a = new Anagram(); 
-	        a.anagm(str, 0, size - 1); 
+	        StringUtils c = new StringUtils();
+	        a.anagm(str, 0, size - 1);
 	        
+//	        System.out.println(a.getListaDeAnagramas());
+//	        
+	        c.compararSubstring(c.geradorNSubstring(str));
+	        
+//	        for (int i = 0; i< c.geradorNSubstring(str).size();i++ )
+//	        	System.out.println(c.geradorNSubstring(str));
 //	        System.out.println("tamanho da lista: "+ a.getListaDeAnagramas());
-	        
-	    } 
-
-
-}
+		}
+	}
