@@ -13,14 +13,14 @@ public class TreeTest {
 		Tree arvore = new Tree();
 		assertEquals(4, arvore.caracteresImpressos(2));
 	}
-	
+
 	@Test
 	@DisplayName("retornaVinteCincoCaracteresImpressos")
 	void retornaVinteCincoCaracteresImpressos() {
 		Tree arvore = new Tree();
 		assertEquals(25, arvore.caracteresImpressos(5));
 	}
-	
+
 	@Test
 	@DisplayName("retornaVinteUmCaracteresImpressos")
 	void retornaVinteUmCaracteresImpressos() {

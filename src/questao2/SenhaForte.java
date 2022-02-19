@@ -2,13 +2,28 @@ package questao2;
 
 public class SenhaForte {
 
+	/*
+	 * @brief verifica quantos caracteres estao faltando
+	 * 
+	 * @param recebe a senha a ser contada
+	 * 
+	 * @return in numero de cacteres faltantes
+	 */
 	public int FaltaNCaracter(String senha) {
 		if (senha.length() <= 6)
 			return 6 - senha.length();
 		return 0;
 	}
 
-	public int VefificarParametrosDaSenha(String senha) {
+	/*
+	 * @brief verifica se não preencheu algum requisito
+	 * 
+	 * @param recebe a senha a ser revificada
+	 * 
+	 * @return retona o numero de requisitos caractes que faltam para preencher os
+	 * resquisitos
+	 */
+	public int VerificarParametrosDaSenha(String senha) {
 		char senhaChar[] = senha.toCharArray();
 		boolean temLetraMaiuscula = false, temLetraMinuscula = false, temCaracteresEspeciais = false,
 				TemDigitos = false;
@@ -32,8 +47,7 @@ public class SenhaForte {
 
 		if (senha.length() < 6) {
 			caracteresFaltantes = FaltaNCaracter(senha);
-		}
-		else {
+		} else {
 			if (!temLetraMaiuscula) {
 				caracteresFaltantes++;
 			}
@@ -45,7 +59,7 @@ public class SenhaForte {
 			}
 			if (!TemDigitos) {
 				caracteresFaltantes++;
-			}			
+			}
 		}
 		return caracteresFaltantes;
 

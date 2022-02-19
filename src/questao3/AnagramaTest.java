@@ -10,21 +10,21 @@ class AnagramaTest {
 	@Test
 	@DisplayName("temQueRetornarZero")
 	void temQueRetornarZero() {
-		StringUtils c = new StringUtils();
+		Anagrama c = new Anagrama();
 		assertEquals(0, c.compararSubstring(c.geradorNSubstring("abc")));
 	}
 	
 	@Test
 	@DisplayName("temQueRetornarDois")
 	void temQueRetornarDois() {
-		StringUtils c = new StringUtils();
+		Anagrama c = new Anagrama();
 		assertEquals(2, c.compararSubstring(c.geradorNSubstring("ovo")));
 	}
 	
 	@Test
 	@DisplayName("temQueRetornarTres")
 	void temQueRetornarTres() {
-		StringUtils c = new StringUtils();
+		Anagrama c = new Anagrama();
 		assertEquals(3, c.compararSubstring(c.geradorNSubstring("ifailuhkqq")));
 	}
 
